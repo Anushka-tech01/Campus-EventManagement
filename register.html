@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect | Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h2>CampusConnect</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="events.html">Events</a>
+            <a href="register.html">Registration</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h1 id="registrationHeading">Student Registration</h1>
+            <p>Register your interest in a college event.</p>
+            <button onclick="changeFontSize()">Change Heading Size</button>
+        </section>
+
+        <section class="registration-box">
+            <button onclick="toggleForm()">Show/Hide Form</button>
+
+            <form id="registrationForm" onsubmit="registerStudent(event)">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="Enter your name">
+
+                <label for="rollNumber">Student Roll Number</label>
+                <input type="text" id="rollNumber" placeholder="Enter your roll number">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <label for="eventSelection">Select Event</label>
+                <select id="eventSelection">
+                    <option value="">Choose an event</option>
+                    <option>INNOTECH 1.O</option>
+                    <option>CodeClash 3.O</option>
+                    <option>Pratibimb</option>
+                    <option>Design Expo</option>
+                </select>
+
+                <button type="submit">Register</button>
+            </form>
+
+            <p id="registrationMessage" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>© 2026 CampusConnect</footer>
+</body>
+</html>
